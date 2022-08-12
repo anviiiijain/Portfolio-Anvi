@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/logo.png";
+import logo from "../Assets/logo.svg";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
@@ -12,6 +12,9 @@ import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
+  AiFillGithub,
+  AiFillLinkedin,
+  AiFillInstagram,
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
@@ -98,7 +101,7 @@ function NavBar() {
                 target="_blank"
                 className="fork-btn-inner"
               >
-                G
+                <AiFillGithub />
               </Button>
             </Nav.Item>
             <Nav.Item className="fork-btn">
@@ -107,7 +110,7 @@ function NavBar() {
                 target="_blank"
                 className="fork-btn-inner"
               >
-                L
+                <AiFillLinkedin/>
               </Button>
             </Nav.Item>
             <Nav.Item className="fork-btn">
@@ -116,7 +119,7 @@ function NavBar() {
                 target="_blank"
                 className="fork-btn-inner"
               >
-                I
+                <AiFillInstagram/>
               </Button>
             </Nav.Item>
           </Nav>
