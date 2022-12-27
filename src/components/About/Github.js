@@ -11,7 +11,7 @@ function Github() {
       <div style={{ width: '100%' }}>
         <GitHubCalendar
           username='anviiiijain'
-          blockSize={10}
+          blockSize={15}
           blockMargin={5}
           color='#c084f5'
           fontSize={16}
