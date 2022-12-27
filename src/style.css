@@ -1,29 +1,44 @@
 html {
   --section-background-color: linear-gradient(
-    to bottom left,
-    rgba(17, 16, 16, 0.582),
+    to bottom,
+    rgb(21, 13, 34, 0.863),
     rgba(12, 8, 24, 0.904)
+  );
+  --section-background-inverse: linear-gradient(
+    to bottom,
+    rgba(12, 8, 24, 0.904),
+    rgb(21, 13, 34, 0.863)
   );
 
   --image-gradient: linear-gradient(
-    to bottom left,
-    rgba(17, 16, 16, 0.678),
-    rgba(12, 10, 22, 0.863)
+    to bottom,
+    rgba(15, 16, 16, 0.678),
+    rgba(12, 8, 18, 0.863)
   );
 
   --imp-text-color: #c770f0;
+}
+
+body {
+  color: white;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 .purple {
   color: var(--imp-text-color) !important;
 }
 
-.align-center{
+.align-center {
   align-items: center;
 }
 
-.padding-y-5{
-padding: 5rem 0;
+.padding-y-5 {
+  padding: 5rem 0;
 }
 
 button:focus {
@@ -53,7 +68,7 @@ button:focus {
   opacity: 0;
 }
 
-#pre-name{
+#pre-name {
   position: relative;
   top: 12%;
   font-size: 0.8rem;
@@ -206,7 +221,7 @@ button:focus {
 }
 
 .navbar-nav .nav-item a::after {
-  content: "";
+  content: '';
   position: relative;
   display: block;
   height: 5px;
@@ -272,9 +287,18 @@ button:focus {
   padding-top: 80px !important;
 }
 
+.link {
+  font-weight: 600;
+  font-size: '1.1rem';
+  text-decoration: none;
+}
+.link:hover {
+  text-decoration: underline;
+}
+
 .home-section {
   position: relative;
-  z-index: -1;
+  height: auto;
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
   background-position: top center;
   background-repeat: no-repeat;
@@ -283,17 +307,29 @@ button:focus {
 }
 
 .home-content {
-  padding: 9rem 0 2rem !important;
+  padding: 0rem 0 !important;
+  height: 100%;
   color: whitesmoke;
   text-align: left;
 }
 
+@media screen and (min-width: 768px) {
+  .home-section {
+    height: 94.5vh;
+  }
+  .home-content {
+    padding: 9rem 0 2rem !important;
+  }
+}
+
 .heading {
+  font-weight: 600;
   font-size: 2.4em !important;
   padding-left: 50px !important;
 }
 
 .heading-name {
+  font-weight: 600;
   font-size: 2.5em !important;
   padding-left: 45px !important;
 }
@@ -325,7 +361,7 @@ button:focus {
 
 .myAvtar {
   justify-content: center !important;
-  /* padding-top: 9em !important; */
+  padding: 0 0 0 2rem;
 }
 
 @media (max-width: 767px) {
@@ -355,17 +391,57 @@ button:focus {
 }
 
 .home-about-social {
-  text-align: center !important;
-  padding-top: 25px;
+  /* text-align: center !important; */
+
+  padding-top: 10px;
   color: white !important;
 }
 
 .home-about-social-links {
-  justify-content: center !important;
+  justify-content: flex-start !important;
   padding-top: 15px !important;
   display: inline-block !important;
   position: relative !important;
   padding-inline-start: 0 !important;
+}
+
+.contact-social-links {
+  justify-content: space-between;
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+.form-label {
+  color: #e1a2f9;
+}
+
+.form-control {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #623686;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.form-control:focus {
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #b068ea;
+  transition: all 0.2s ease-in-out;
+  box-shadow: none;
+}
+
+@media screen and (min-width: 640px) {
+  .form-control {
+    min-width: 400px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .form-control {
+    min-width: 500px;
+  }
 }
 
 .home-social-icons {
@@ -382,7 +458,7 @@ button:focus {
 }
 
 .home-social-icons::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -408,8 +484,7 @@ button:focus {
 
 .social-icons {
   display: inline-block !important;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 25px;
 }
 
 .icon-colour {
@@ -463,9 +538,22 @@ button:focus {
 /* --------- */
 .project-section {
   position: relative !important;
-  padding-top: 70px !important;
-  padding-bottom: 30px !important;
+  padding-top: 95px;
+  height: 100%;
+  /* padding-bottom: 30px !important; */
+
   background-image: var(--section-background-color) !important;
+}
+
+@media screen and (min-width: 768px) {
+  .project-section {
+    position: relative !important;
+    padding-top: 55px;
+    height: 87.25vh;
+    /* padding-bottom: 30px !important; */
+
+    background-image: var(--section-background-color) !important;
+  }
 }
 
 .project-card {
@@ -488,6 +576,13 @@ button:focus {
   transform: scale(1.02) !important;
   overflow: hidden !important;
   box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
+}
+
+.project-card-subtitle {
+  font-weight: 700 !important;
+  padding-top: 0.7rem;
+  opacity: 0.5;
+  font-size: 14px !important;
 }
 
 .blog-card {
@@ -567,6 +662,38 @@ button:focus {
   color: white !important;
 }
 
+.home-about-section {
+  background-image: var(--section-background-color) !important;
+}
+.contact-section {
+  color: white;
+  padding-top: 95px;
+  height: 88vh;
+  background-image: var(--section-background-color) !important;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-section {
+    padding-top: 55px;
+    height: 87.25vh;
+  }
+}
+
+.contact-card {
+  width: fit-content;
+  padding: 1rem 0.5rem;
+  margin: 3rem auto;
+  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
+  color: white !important;
+  background-color: transparent !important;
+  opacity: 0.9 !important;
+  transition: all 0.5s ease 0s !important;
+}
+
+.skills-section {
+  background-image: var(--section-background-inverse) !important;
+}
+
 .tech-icons {
   font-size: 4.5em !important;
   margin: 15px !important;
@@ -582,10 +709,9 @@ button:focus {
   transition: all 0.4s ease 0s !important;
 }
 
-.tech-icon-name{
+.tech-icon-name {
   font-size: 1.5rem;
 }
-
 
 @media (max-width: 767px) {
   .tech-icons {
@@ -626,8 +752,9 @@ button:focus {
 
 .resume-section {
   position: relative !important;
-  padding-top: 110px !important;
-  padding-bottom: 30px !important;
+  padding-top: 40px;
+  height: 90vh;
+  padding-bottom: 30px;
   background-image: var(--section-background-color) !important;
   color: white !important;
 }
@@ -635,7 +762,20 @@ button:focus {
 .resume {
   padding-top: 50px;
   padding-bottom: 50px;
+  width: 75%;
   justify-content: center;
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .resume-section {
+    padding-top: 0px;
+    padding-bottom: 20px;
+    height: 100%;
+  }
+  .resume {
+    width: 35%;
+  }
 }
 
 .resume-left {
@@ -696,7 +836,7 @@ button:focus {
 }
 
 .resume .resume-item::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 16px;
   height: 16px;
