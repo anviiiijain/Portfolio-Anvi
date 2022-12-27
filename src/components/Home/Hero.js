@@ -48,7 +48,12 @@ function Hero() {
                 </p>
               </div>
 
-              <a href={pdf} className='purple link'>
+              <a
+                href={pdf}
+                target='_blank'
+                rel='noreferrer'
+                className='purple link'
+              >
                 Checkout my resume
               </a>
               <div className='home-about-social'>
