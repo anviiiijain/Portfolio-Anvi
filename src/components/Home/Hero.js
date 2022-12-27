@@ -48,7 +48,7 @@ function Hero() {
                 </p>
               </div>
 
-              <a href='http://localhost:3001/' className='purple link'>
+              <a href={pdf} className='purple link'>
                 Checkout my resume
               </a>
               <div className='home-about-social'>
