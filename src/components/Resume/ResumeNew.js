@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Container, Row } from 'react-bootstrap'
 import Button from 'react-bootstrap/Button'
 import Particle from '../Particle'
-import pdf from '../../Assets/../Assets/Anvi_Jain_Resume.pdf'
+import pdf from '../../Assets/Anvi_Jain_Resume.pdf'
 import { AiOutlineDownload } from 'react-icons/ai'
 import { Document, Page, pdfjs } from 'react-pdf'
 import Tilt from 'react-parallax-tilt'
@@ -26,11 +26,16 @@ function ResumeNew() {
       <Container fluid className='resume-section'>
         <Particle />
 
-        <div className='resume'>
-          <img src={myResume} className='img-fluid' alt='Anvi Jain Resume' />
-        </div>
-
-        <Row style={{ justifyContent: 'center', position: 'relative' }}>
+        <Document file={pdf} className='d-flex justify-content-center'>
+          <Page pageNumber={1} scale={width > 786 ? 0.725 : 0.6} />
+        </Document>
+        <Row
+          style={{
+            justifyContent: 'center',
+            position: 'relative',
+            marginTop: '1rem',
+          }}
+        >
           <Button
             variant='primary'
             href={pdf}

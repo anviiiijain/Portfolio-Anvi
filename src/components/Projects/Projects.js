@@ -69,7 +69,7 @@ function Projects() {
                         isWork={true}
                         title='Incentiv'
                         subtitle='FULL-STACK DEVELOPER'
-                        description=''
+                        description='(NextJS, Typescript, Express, TailwindCSS, Chakra UI, and React-query)'
                         link='https://incentiv.in'
                       />
                     </Col>
@@ -79,7 +79,7 @@ function Projects() {
                         isWork={true}
                         title='EventEngage'
                         subtitle='JUNIOR SOFTWARE DEVELOPER'
-                        description=''
+                        description='(ReactJS, Express, SaSS)'
                         link='https://eventengage.io/'
                       />
                     </Col>
@@ -90,7 +90,7 @@ function Projects() {
                         isWork={true}
                         title='Muniversiti'
                         subtitle='FULL STACK DEVELOPER'
-                        description=''
+                        description='(ReactJS, Express, TailwindCSS)'
                         link='https://www.muniversiti.org/'
                       />
                     </Col>
@@ -109,7 +109,7 @@ function Projects() {
                         imgPath={InternNET}
                         title='InternNET'
                         subtitle='ReactJS | NodeJS | ExpressJS | PostgreSQL'
-                        description='(Team Project)'
+                        description='Internship management for a college university.'
                         link=''
                       />
                     </Col>
@@ -119,7 +119,7 @@ function Projects() {
                         imgPath={medicsy}
                         title='Medicsy'
                         subtitle='ReactJS | NodeJS | ExpressJS | PostgreSQL'
-                        description='(Team Project)'
+                        description='A website that helps patients and doctors to avoid long lines at Clinics.'
                         link=''
                       />
                     </Col>

@@ -549,7 +549,7 @@ button:focus {
   .project-section {
     position: relative !important;
     padding-top: 55px;
-    height: 87.25vh;
+    /* height: 87.25vh; */
     /* padding-bottom: 30px !important; */
 
     background-image: var(--section-background-color) !important;
@@ -769,8 +769,8 @@ button:focus {
 
 @media screen and (min-width: 768px) {
   .resume-section {
-    padding-top: 0px;
-    padding-bottom: 20px;
+    padding-top: 45px;
+    padding-bottom: 10px;
     height: 100%;
   }
   .resume {

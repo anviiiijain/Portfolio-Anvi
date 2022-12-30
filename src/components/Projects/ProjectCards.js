@@ -13,7 +13,15 @@ function ProjectCards(props) {
           {props.subtitle}
         </Card.Subtitle>
         <Card.Text style={{ paddingTop: '0.7rem', fontSize: '14px' }}>
-          {props.description}
+          {Array.isArray(props?.description) ? (
+            <ul style={{ textAlign: 'left', listStyle: 'none' }}>
+              {props?.description?.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          ) : (
+            <>{props.description}</>
+          )}
         </Card.Text>
         {props.link && (
           <Button variant='primary' href={props.link} target='_blank'>
