@@ -27,7 +27,7 @@ function ResumeNew() {
         <Particle />
 
         <Document file={pdf} className='d-flex justify-content-center'>
-          <Page pageNumber={1} scale={width > 786 ? 0.725 : 0.6} />
+          <Page pageNumber={1} scale={width > 786 ? 0.725 : 0.5} />
         </Document>
         <Row
           style={{
