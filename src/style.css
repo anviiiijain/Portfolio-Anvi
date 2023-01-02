@@ -419,6 +419,7 @@ button:focus {
   background-color: transparent;
   outline: none;
   border: none;
+  color: white !important;
   border-bottom: 1px solid #623686;
   min-width: 300px;
   max-width: 500px;
@@ -668,7 +669,7 @@ button:focus {
 .contact-section {
   color: white;
   padding-top: 95px;
-  height: 88vh;
+  height: 100%;
   background-image: var(--section-background-color) !important;
 }
 
